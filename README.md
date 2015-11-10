@@ -18,7 +18,7 @@ Add the following dependency into your pom.xml
 
 ```xml
 <dependency>
-    <groupId>com.github.rojani</groupId>
+    <groupId>com.github.rojanu</groupId>
     <artifactId>dropwizard-brave</artifactId>
     <version>0.1-SNAPSHOT</version>
 </dependency>
@@ -46,8 +46,8 @@ Add the `BraveBundle` to your application
 ```java
 bootstrap.addBundle(new BraveBundle<ExampleConfiguration>() {
     @Override
-    public BraveTraceConfiguration getBraveTraceConfiguration(BundleConfiguration configuration) {
-        return configuration.getBraveTraceConfiguration();
+    public BraveTraceConfiguration getBraveTraceConfiguration(ExampleConfiguration exampleConfiguration) {
+        return exampleConfiguration.getBraveTraceConfiguration();
     }
 });
 ```
